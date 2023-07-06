@@ -9,14 +9,14 @@ The following is an explanation of how the programme works:
    * It determines whether `num` is already present in the same row, column, or 3x3 subgrid. If it exists, it returns 0 (unsafe), otherwise it returns 1 (safe)
 
 2. `solveSudoku` Function:
-  * The `solveSudoku` function is a recursive function that uses backtracking to solve the Sudoku problem.
-  * It begins by locating an unassigned cell in the puzzle (with value 0).
-  * If all cells have been allocated (there is no empty cell), the puzzle is deemed solved, and the method returns 1.
-  * It tries inserting integers 1 to 9 one by one in the unassigned cell and tests if the placement is safe using the `isSafe` function.
-  * If the placement is safe, the cell is assigned a number, and the function is used recursively to solve the updated puzzle.
-  * If the recursive call returns 1 (solution found), so does the function.
-  * If the recursive call does not lead to a solution, the function backtracks by setting the current cell value back to 0 and tries the next number.
-  * If all numbers have been tried and no solution is found, the function returns 0.
+    * The `solveSudoku` function is a recursive function that uses backtracking to solve the Sudoku problem.
+    * It begins by locating an unassigned cell in the puzzle (with value 0).
+    * If all cells have been allocated (there is no empty cell), the puzzle is deemed solved, and the method returns 1.
+    * It tries inserting integers 1 to 9 one by one in the unassigned cell and tests if the placement is safe using the `isSafe` function.
+    * If the placement is safe, the cell is assigned a number, and the function is used recursively to solve the updated puzzle.
+    * If the recursive call returns 1 (solution found), so does the function.
+    * If the recursive call does not lead to a solution, the function backtracks by setting the current cell value back to 0 and tries the next number.
+    * If all numbers have been tried and no solution is found, the function returns 0.
 
 3. `printSudoku` Function:
    * The Sudoku problem is printed using the `printSudoku` function in a grid style, with a gap between each number.
